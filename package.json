@@ -1,0 +1,24 @@
+{
+  "name": "simple_auth_exp_nod_mong",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasyl1312/simple_auth_exp_nod_mong.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vasyl1312/simple_auth_exp_nod_mong/issues"
+  },
+  "homepage": "https://github.com/vasyl1312/simple_auth_exp_nod_mong#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8",
+    "nodemon": "^2.0.15"
+  }
+}
