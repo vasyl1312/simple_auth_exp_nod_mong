@@ -4,6 +4,8 @@ const controller = require('./authController')
 const {
   check
 } = require('express-validator')
+const authMiddleware = require('./middleware/authMiddleware')
+const roleMiddleware = require('./middleware/roleMiddleware')
 
 router.post('/registration', [
   check('username', 'Ім`я користувача не може бути пустим').notEmpty(),
@@ -13,8 +15,8 @@ router.post('/registration', [
   })
 ], controller.registration) //роути і відповідні їм контролери
 router.post('/login', controller.login)
-router.get('/users', controller.getUsers)
-
+router.get('/users', roleMiddleware(['USER', 'ADMIN']), controller.getUsers)
+//тут можна міняти і умовно для юзера і адміна давати різні права і завдання і перевіряти це у постмені
 
 
 module.exports = router
